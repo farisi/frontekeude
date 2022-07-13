@@ -1,4 +1,4 @@
-<script>
+<script lang="ts" >
 	import { page } from '$app/stores';
 	import logo from './svelte-logo.svg';
 </script>
@@ -9,7 +9,6 @@
 			<img src={logo} alt="SvelteKit" />
 		</a>
 	</div>
-
 	<nav>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
 			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
@@ -22,14 +21,18 @@
 			<li class:active={$page.url.pathname === '/todos'}>
 				<a sveltekit:prefetch href="/todos">Todos</a>
 			</li>
+
+			<li class:active={$page.url.pathname === '/test'}>
+				<a sveltekit:prefetch href="/test">Test</a>
+			</li>
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
 			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
 		</svg>
 	</nav>
-
 	<div class="corner">
 		<!-- TODO put something else here? github link? -->
+		test otak atik
 	</div>
 </header>
 
